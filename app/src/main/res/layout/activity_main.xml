@@ -40,7 +40,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="16dp"
             android:ems="10"
-            android:hint="phone"
+            android:hint="LInk"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/editTextText2"
             app:layout_constraintStart_toStartOf="@+id/editTextText2"

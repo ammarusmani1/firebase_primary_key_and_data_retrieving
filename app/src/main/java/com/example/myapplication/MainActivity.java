@@ -38,7 +38,7 @@ int maxId=0;
             HashMap<String, String> map = new HashMap<>();
             map.put("name", binding.editTextText.getText().toString());
             map.put("email", binding.editTextText2.getText().toString());
-            map.put("phone", binding.editTextText3.getText().toString());
+            map.put("link", binding.editTextText3.getText().toString());
             map.put("address", binding.editTextText4.getText().toString());
             map.put("city", binding.editTextText5.getText().toString());
 

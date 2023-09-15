@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.example.myapplication.databinding.ActivityMain2Binding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,14 +32,14 @@ public class MainActivity2 extends AppCompatActivity {
                     Map<String, String> getMap = (Map) snapshot.getValue();
                     String name = getMap.get("name");
                     String email = getMap.get("email");
-                    String phone = getMap.get("phone");
+                    String link = getMap.get("link");
                     String address = getMap.get("address");
                     String city = getMap.get("city");
                     binding.textView.setText(name);
                     binding.textView2.setText(email);
-                    binding.textView3.setText(phone);
-                    binding.textView4.setText(address);
-                    binding.textView5.setText(city);
+                    binding.textView3.setText(address);
+                    binding.textView4.setText(city);
+                    Glide.with(MainActivity2.this).load(link).into(binding.imageView);
                 } else {
                     Toast.makeText(MainActivity2.this, "data not present", Toast.LENGTH_SHORT).show();
                 }
